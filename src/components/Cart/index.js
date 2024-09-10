@@ -4,6 +4,7 @@ import CartListView from '../CartListView'
 import CartContext from '../../context/CartContext'
 import EmptyCartView from '../EmptyCartView'
 import CartSummary from '../CartSummary'
+
 import './index.css'
 
 const Cart = () => (
@@ -27,7 +28,7 @@ const Cart = () => (
                 <button
                   type="button"
                   className="remove-all-btn"
-                  onClick={onClickRemoveAllBtn}
+                  onClick={removeAllCartItems}
                 >
                   Remove All
                 </button>

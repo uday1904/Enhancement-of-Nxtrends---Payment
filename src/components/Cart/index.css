@@ -42,7 +42,7 @@
   display: flex;
   align-self: flex-end;
   color: #0b69ff;
-  background: transparent;
+  background-color: transparent;
   font-family: 'Roboto';
   font-size: 18px;
   font-weight: 500;
@@ -56,4 +56,10 @@
   .remove-all-btn {
     font-size: 16px;
   }
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

@@ -16,11 +16,11 @@ const CartItem = props => (
       const {cartItemDetails} = props
       const {id, title, brand, quantity, price, imageUrl} = cartItemDetails
 
-      const onClickDecrement = () => {
-        decrementCartItemQuantity(id)
-      }
-      const onClickIncrement = () => {
+      const onIncrementCartItemQty = () => {
         incrementCartItemQuantity(id)
+      }
+      const onDecrementCartItemQty = () => {
+        decrementCartItemQuantity(id)
       }
       const onRemoveCartItem = () => {
         removeCartItem(id)
@@ -39,9 +39,9 @@ const CartItem = props => (
               <button
                 type="button"
                 className="quantity-controller-button"
-                // eslint-disable-next-line react/no-unknown-property
+                aria-label="Mute volume"
                 data-testid="minus"
-                onClick={onClickDecrement}
+                onClick={onDecrementCartItemQty}
               >
                 <BsDashSquare color="#52606D" size={12} />
               </button>
@@ -49,9 +49,9 @@ const CartItem = props => (
               <button
                 type="button"
                 className="quantity-controller-button"
-                // eslint-disable-next-line react/no-unknown-property
+                aria-label="Mute volume"
                 data-testid="plus"
-                onClick={onClickIncrement}
+                onClick={onIncrementCartItemQty}
               >
                 <BsPlusSquare color="#52606D" size={12} />
               </button>
@@ -71,7 +71,7 @@ const CartItem = props => (
             className="delete-button"
             type="button"
             onClick={onRemoveCartItem}
-            // eslint-disable-next-line react/no-unknown-property
+            aria-label="Mute volume"
             data-testid="remove"
           >
             <AiFillCloseCircle color="#616E7C" size={20} />
